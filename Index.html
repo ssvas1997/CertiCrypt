@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="certificate-registry.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="certificates.js"></script>
+    <script src="Config/ContractABI.js"></script>
+   
+    <title>Document</title>
+</head>
+<body style="height:100vh !important;" class="v_blue_pro" data-spy="scroll" data-offset="110">
+     <main>
+        <section id="loadingBox">Loading ...</section>
+
+        <section id="infoBox"><header>x</header><p>Info</p></section>
+    
+        <section id="errorBox"><header>x</header><p>Error</p></section>
+    <!-- START HEADER -->
+<header class="header_wrap fixed-top nav-fixed header.active">
+        <div class="container ">
+          <nav class="navbar navbar-expand-lg  "> 
+              <a class="navbar-brand page-scroll animation" href="#home" data-animation="fadeInLeft" data-animation-delay="0.8s">
+                  <H1>CertiCrypt</H1>
+                  <!-- <img class="logo_dark" src="assets/images/logo_dark.png" alt="logo" /> -->
+              </a>
+            <button class="navbar-toggler animation" data-animation="fadeInRight" data-animation-delay="1.2s" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="ion-android-menu"></span> </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+              <ul class="navbar-nav nav_btn animation" data-animation="fadeInRight" data-animation-delay="1.6s">
+                <li><a class="btn btn-default" id="linkHome" href="#">Home</a></li>
+                <!-- <li><a class="nav-link page-scroll btn btn-default" href="#mobileapp">Upload</a></li> -->
+                <li><a class="nav-link page-scroll btn btn-default" id="linkGetCertificates" href="#">View</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- START HEADER --> 
+
+
+
+        <section id="viewHome" class="banner_section section_gradiant3 small_pb banner_full_height banner_shape_effect">
+                <div id="banner_bg_effect" class="banner_effect"> </div> 
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 col-sm-12 order-lg-first text_md_center">
+                      <div class="banner_text">
+                        <h1 class="animation" data-animation="fadeInUp" data-animation-delay="1.6s">Decentralized</h1>
+                        <h3 class="animation" data-animation="fadeInUp" data-animation-delay="1.7s">Now store your Certificates on more secured and decentralized environment</h3>
+                        <div class="banner_btn animation" data-animation="fadeInUp" data-animation-delay="1.8s">
+                            
+                            <!-- custom-code    -->
+                            <!-- <div class="custom-file">
+                                <input type="file" class="custom-file-input btn btn-default page-scroll" id="linkSubmitCertificate" aria-describedby="CertificateUploadButton">
+                                <label class="custom-file-label " for="linkSubmitCertificate">Choose file</label>
+                            </div>
+                                      <br>
+                                      <br>
+                                                        <a href="#" id="CertificateUploadButton" class="btn btn-default page-scroll">File upload</a> -->
+                              <div class="up">
+                                  <button class="btn btn-default">Upload</button>
+
+                              <input type="file" class="btn btn-default" id="CertificateForUpload" />
+                            
+                            </div>
+                            <div>
+                                <input type="button" class="btn btn-default" id="CertificateUploadButton" value="Submit" />
+                              </div>
+                                
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 col-sm-12 order-first">
+                    <img src="banner_vector3.png" alt="banner_vector3"/>   
+                      </div>
+                  </div>
+                </div>
+             
+              </section>
+              <section style="" id="viewGetCertificates" class="banner_section section_gradiant3 small_pb banner_full_height banner_shape_effect " >
+                  <div id="banner_bg_effect" class="banner_effect"> </div>
+                  <div class="container">
+                    <div class="row" id="certi">
+
+                    </div>
+                  </div>
+              </section>
+            </main>
+   
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
